@@ -1,0 +1,117 @@
+.signup-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.signup-card {
+  background-color: #161616;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.signup-subtitle {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 24px;
+}
+
+.signup-prompt {
+  margin-bottom: 16px;
+}
+
+.messenger-icon img {
+  width: 70px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.telegram-input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.signup-button {
+  padding: 10px 20px;
+  background-color: #f4c430;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.signup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.help-text {
+  font-size: 14px;
+  color: #f4c430;
+  margin-bottom: 8px;
+}
+
+.help-button {
+  background-color: #f4c430;
+  color: #000;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.signup-footer {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #777;
+}
+.terms-text a {
+  color: #4aa0ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .signup-title {
+    font-size: 24px;
+  }
+
+  .signup-subtitle,
+  .help-text,
+  .signup-footer,
+  .terms-text {
+    font-size: 12px;
+  }
+}
