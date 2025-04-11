@@ -24,7 +24,7 @@ exports.sendOtp = (req, res) => {
       const expires = new Date(Date.now() + 10 * 60000); // 10 minutes
 
       db.query(
-        'INSERT INTO otps (telegram_id, otp, expires_at) VALUES (?, ?, ?)',
+        'INSERT INTO otps_5 (telegram_id, otp, expires_at) VALUES (?, ?, ?)',
         [telegram_id, otp, expires],
         async (err) => {
           if (err) {
@@ -65,7 +65,7 @@ exports.sendLoginOtp = (req, res) => {
         const expires = new Date(Date.now() + 10 * 60000); // 10 minutes
 
         db.query(
-          'INSERT INTO otps (telegram_id, otp, expires_at) VALUES (?, ?, ?)',
+          'INSERT INTO otps_5 (telegram_id, otp, expires_at) VALUES (?, ?, ?)',
           [telegram_id, otp, expires],
           async (err) => {
             if (err) {
@@ -97,7 +97,7 @@ exports.verifyOtp = (req, res) => {
   const { telegram_id, otp } = req.body;
 
   db.query(
-    'SELECT * FROM otps WHERE telegram_id = ? AND otp = ? AND expires_at > NOW()',
+    'SELECT * FROM otps_5 WHERE telegram_id = ? AND otp = ? AND expires_at > NOW()',
     [telegram_id, otp],
     (err, results) => {
       if (err || results.length === 0)
@@ -119,7 +119,7 @@ exports.verifyLoginOtp = (req, res) => {
   const { telegram_id, otp } = req.body;
 
   db.query(
-    'SELECT * FROM otps WHERE telegram_id = ? AND otp = ? AND expires_at > NOW()',
+    'SELECT * FROM otps_5 WHERE telegram_id = ? AND otp = ? AND expires_at > NOW()',
     [telegram_id, otp],
     (err, results) => {
       if (err || results.length === 0)

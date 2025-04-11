@@ -25,11 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `otps`
+-- Table structure for table `otps_5`
 --
 
-DROP TABLE IF EXISTS `otps`;
-CREATE TABLE IF NOT EXISTS `otps` (
+DROP TABLE IF EXISTS `otps_5`;
+CREATE TABLE IF NOT EXISTS `otps_5` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `telegram_id` varchar(255) DEFAULT NULL,
   `otp` varchar(6) DEFAULT NULL,
