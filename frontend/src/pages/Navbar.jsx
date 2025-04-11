@@ -10,8 +10,7 @@ function Navbar() {
   const navigate = useNavigate();
   
   useEffect(() => {
-    if (isAuthenticated) navigate("/dashboard");
-    else navigate("/signup");
+    if (!isAuthenticated) navigate("/signup");
   }, [isAuthenticated]);
 
   const isLoginPage = location.pathname === '/login';
